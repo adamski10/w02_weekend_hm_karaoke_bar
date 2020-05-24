@@ -7,6 +7,4 @@ class Bar
     return "Thank you"
   end
 
-  
-  
 end

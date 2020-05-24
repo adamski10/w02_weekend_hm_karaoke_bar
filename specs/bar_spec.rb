@@ -11,8 +11,8 @@ class BarTest < Minitest::Test
   
   def setup
     @bar = Bar.new()
-    @guest_1 = Guest.new("Mike", 100)
-    @guest_2 = Guest.new("George", 10)
+    @guest_1 = Guest.new("Mike", 100, "Child in time")
+    @guest_2 = Guest.new("George", 10, "Bohemian rapsody")
     @rock_room = Room.new("Rock", 3, 20)
     @jazz_room = Room.new("Jazz", 1, 10)
     @ballads_room = Room.new("Metal", 2, 30)
@@ -41,8 +41,6 @@ class BarTest < Minitest::Test
     @jazz_room.guest_check_in(@guest_2)
     @bar.sale(@jazz_room, @guest_1)
     assert_equal("Room full", @jazz_room.check_if_room_available())
-    # assert_equal(120, @rock_room.till())
-    # assert_equal(1, @rock_room.guests_list().count)
   end
 
 end

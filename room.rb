@@ -1,6 +1,6 @@
 class Room
 
-  attr_reader :music_genre, :capacity, :price, :till, :guests_list
+  attr_reader :music_genre, :capacity, :price, :till, :guests_list, :songs_list
 
   def initialize(music_genre, capacity, price)
     @music_genre = music_genre
